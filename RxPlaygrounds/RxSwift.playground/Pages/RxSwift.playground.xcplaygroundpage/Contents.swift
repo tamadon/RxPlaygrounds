@@ -46,9 +46,9 @@ struct GithubRepository {
 }
 
 func searchRepos(keyword: String) -> Observable<SearchResult?> {
-    let endPoint = "http://api.github.com"
+    let endPoint = "https://api.github.com"
     let path = "/search/repositories"
-    let query = "?q=¥\(keyword)"
+    let query = "?q=\(keyword)"
     let url = URL(string: endPoint + path + query)!
     let request = URLRequest(url: url)
     
